@@ -1,8 +1,10 @@
 ---
+# TODO: if permissions have been set, this does not work
 - name: List plugins
   sudo: yes
   action: shell java -jar {{ jenkins.cli_dest }} -s http://localhost:{{ jenkins.port }} list-plugins | cut -f 1 -d ' '
   when: plugins is defined
+  ignore_errors: yes
   register: plugins_installed
 
 # Install/update Jenkins plugins
