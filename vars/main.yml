@@ -1,6 +1,7 @@
 ---
 jenkins_dest: /opt/jenkins
 jenkins:
+  port: 8080
   deb:
     repo: 'deb http://pkg.jenkins-ci.org/debian binary/' # Jenkins repository
     key: 'http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key' # Jenkins key
